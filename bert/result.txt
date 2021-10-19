@@ -1,0 +1,34 @@
+bert/baseline/initial/：
+detection sentence accuracy:0.523,precision:0.5390295358649789,recall:0.5268041237113402,F1:0.5328467153284672
+correction sentence accuracy:0.517,precision:0.5327004219409283,recall:0.520618556701031,F1:0.5265901981230449
+sentence target modify:970,sentence sum:1000,sentence modified accurate:505
+bert/baseline/sighan13：
+detection sentence accuracy:0.799,precision:0.8685393258426967,recall:0.7969072164948454,F1:0.8311827956989247
+correction sentence accuracy:0.792,precision:0.8606741573033708,recall:0.7896907216494845,F1:0.8236559139784946
+sentence target modify:970,sentence sum:1000,sentence modified accurate:766
+bert/pre_train/initial：
+detection sentence accuracy:0.729,precision:0.7416317991631799,recall:0.7309278350515463,F1:0.7362409138110072
+correction sentence accuracy:0.724,precision:0.7364016736401674,recall:0.7257731958762886,F1:0.731048805815161
+sentence target modify:970,sentence sum:1000,sentence modified accurate:704
+bert/pre_train/sighan13：
+detection sentence accuracy:0.836,precision:0.8689581095596133,recall:0.8340206185567011,F1:0.8511309836927933
+correction sentence accuracy:0.832,precision:0.8646616541353384,recall:0.8298969072164949,F1:0.8469226722777485
+sentence target modify:970,sentence sum:1000,sentence modified accurate:805
+
+对于data1：
+1、加载pre_train/initial/model.pkl，并基于此继续训练sighan13：
+lr=2e-7， batchsize=32, max_len=128, epoch=400，得到：
+detection sentence accuracy:0.831,precision:0.8635875402792696,recall:0.8288659793814434,F1:0.8458705944239874
+correction sentence accuracy:0.827,precision:0.8592910848549946,recall:0.8247422680412371,F1:0.8416622830089426
+sentence target modify:970,sentence sum:1000,sentence modified accurate:800
+bert_pretrain ,epoch 400,train_loss: 0.005944552947767079,valid_loss: 0.38606385549064726
+
+
+对于data2：
+1、使用pre_train/initial直接测试：
+detection sentence accuracy:0.6632023384215654,precision:0.7274670466690417,recall:0.6632023384215654,F1:0.6938498131158681
+correction sentence accuracy:0.613835660928873,precision:0.6733167082294265,recall:0.613835660928873,F1:0.6422018348623854
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1890
+2、在该基础上我们进行训练，并测试：
+lr=2e-7， batchsize=32, max_len=128, epoch=1, 训练一个epoch后，f1达到0.73。尝试过多训练几个epoch，
+发现验证损失上升，f1值下降，可能由于过拟合了。

@@ -1,0 +1,91 @@
+----Task: bert_pretrain begin !----
+Some weights of the model checkpoint at ../../../model_hub/bert-base-chinese/ were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+联合国紧急事务首席协调官艾蒽兰表示,这是全球有史以来首次子灾难发生候这么短一段时间内,就筹集到这么高的金额。 联合国紧急事务首席协调官艾基兰表示,这是全球有史以来首次在灾难发生后这么短一段时间内,就筹集到这么高的金额。
+日本大藏省一名官员坚称,日本仍忠于全球自由贸易贞经神。 日本大藏省一名官员坚称,日本仍忠于全球自由贸易的精神。
+小泉承诺将革除始曰苯陷于十年经济衰退的弊病。 小泉承诺将革除使日本陷于十年经济衰退的弊病。
+但是我不能去参加，因为我有一点事情阿！ 但是我不能去参加，因为我有一点事情啊！
+听起来是一份很好的公司。又意思又很多钱。 听起来是一份很好的公司。有意思又很多钱。
+敬祝身体建慷。 敬祝身体健康。
+/data/data01/gob_test/envs/sbert/lib/python3.6/site-packages/transformers/tokenization_utils_base.py:2132: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  FutureWarning,
+detection sentence accuracy:0.44949658980188373,precision:0.6618842659014825,recall:0.44949658980188373,F1:0.5353965183752417
+correction sentence accuracy:0.4040272815849302,precision:0.5949306551889049,recall:0.4040272815849302,F1:0.4812379110251451
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1244
+bert_pretrain ,epoch 1,train_loss: 3269.1597692519426,valid_loss: 22.98219905793667
+save model done!
+Time cost: 5131.82799911499 s
+----------
+detection sentence accuracy:0.5888275414095485,precision:0.6619204089083607,recall:0.5888275414095485,F1:0.6232382261945685
+correction sentence accuracy:0.5391360831438778,precision:0.6060606060606061,recall:0.5391360831438778,F1:0.5706428325885183
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1660
+bert_pretrain ,epoch 2,train_loss: 922.9512568637729,valid_loss: 16.868663482367992
+save model done!
+Time cost: 9960.75432729721 s
+----------
+detection sentence accuracy:0.6079896070152647,precision:0.663359319631467,recall:0.6079896070152647,F1:0.6344687341128622
+correction sentence accuracy:0.5553751217927899,precision:0.6059532246633593,recall:0.5553751217927899,F1:0.57956278596848
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1710
+bert_pretrain ,epoch 3,train_loss: 678.9193026050925,valid_loss: 15.553926780819893
+save model done!
+Time cost: 14625.13410615921 s
+----------
+detection sentence accuracy:0.6161091263397207,precision:0.6670182841068917,recall:0.6161091263397207,F1:0.6405537734256289
+correction sentence accuracy:0.5641442026632023,precision:0.6107594936708861,recall:0.5641442026632023,F1:0.5865270977545163
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1737
+bert_pretrain ,epoch 4,train_loss: 577.6821632497013,valid_loss: 14.897169560194016
+save model done!
+Time cost: 19324.20722436905 s
+----------
+detection sentence accuracy:0.6303994803507632,precision:0.6781970649895178,recall:0.6303994803507632,F1:0.6534253492678
+correction sentence accuracy:0.5764858720363755,precision:0.6201956673654787,recall:0.5764858720363755,F1:0.5975425012624137
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1775
+bert_pretrain ,epoch 5,train_loss: 519.9429520480335,valid_loss: 14.444659180939198
+save model done!
+Time cost: 24528.043479681015 s
+----------
+detection sentence accuracy:0.6346216303994804,precision:0.6813110181311018,recall:0.6346216303994804,F1:0.657138052799731
+correction sentence accuracy:0.5823319259499837,precision:0.6251743375174338,recall:0.5823319259499837,F1:0.6029931057676139
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1793
+bert_pretrain ,epoch 6,train_loss: 482.5397003740072,valid_loss: 14.276826187968254
+save model done!
+Time cost: 29565.703720331192 s
+----------
+detection sentence accuracy:0.6339720688535239,precision:0.6803764377831997,recall:0.6339720688535239,F1:0.65635507733692
+correction sentence accuracy:0.582656706722962,precision:0.6253049843150924,recall:0.582656706722962,F1:0.6032279757901816
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1794
+bert_pretrain ,epoch 7,train_loss: 457.0015064589679,valid_loss: 14.149936109781265
+save model done!
+Time cost: 34286.453436136246 s
+----------
+detection sentence accuracy:0.6375446573562845,precision:0.6837338906304423,recall:0.6375446573562845,F1:0.6598319327731091
+correction sentence accuracy:0.5862292952257226,precision:0.6287008011145943,recall:0.5862292952257226,F1:0.6067226890756303
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1805
+bert_pretrain ,epoch 8,train_loss: 436.88704565912485,valid_loss: 13.925052039325237
+save model done!
+Time cost: 39072.24688529968 s
+----------
+detection sentence accuracy:0.6411172458590452,precision:0.6868475991649269,recall:0.6411172458590452,F1:0.6631950277171174
+correction sentence accuracy:0.5881779798635921,precision:0.6301322199025748,recall:0.5881779798635921,F1:0.6084327229968083
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1811
+bert_pretrain ,epoch 9,train_loss: 420.5763296633959,valid_loss: 13.904210396111012
+save model done!
+Time cost: 44552.37721371651 s
+----------
+detection sentence accuracy:0.6411172458590452,precision:0.6885245901639344,recall:0.6411172458590452,F1:0.6639757820383451
+correction sentence accuracy:0.5901266645014616,precision:0.6337635158702476,recall:0.5901266645014616,F1:0.6111671712075346
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1817
+bert_pretrain ,epoch 10,train_loss: 407.3908385746181,valid_loss: 13.833884827792645
+save model done!
+Time cost: 49003.112409591675 s
+----------
+======================================================
+错误句子： ['你', '找', '到', '你', '最', '喜', '欢', '的', '工', '作', '，', '我', '也', '很', '高', '心', '。']
+预测句子： ['你', '找', '到', '你', '最', '喜', '欢', '的', '工', '作', '，', '我', '也', '很', '高', '兴', '。']
+======================================================
+错误句子： ['刘', '墉', '在', '三', '岁', '过', '年', '时', '，', '全', '家', '陷', '入', '火', '海', '，', '把', '家', '烧', '得', '面', '目', '全', '飞', '、', '体', '无', '完', '肤', '。']
+预测句子： ['刘', '墉', '在', '三', '岁', '过', '年', '时', '，', '全', '家', '陷', '入', '火', '海', '，', '把', '家', '烧', '得', '面', '目', '全', '非', '、', '体', '无', '完', '肤', '。']
+======================================================
+错误句子： ['遇', '到', '逆', '竟', '时', '，', '我', '们', '必', '须', '勇', '于', '面', '对', '，', '而', '且', '要', '愈', '挫', '愈', '勇', '，', '这', '样', '我', '们', '才', '能', '朝', '著', '成', '功', '之', '路', '前', '进', '。']
+预测句子： ['遇', '到', '逆', '境', '时', '，', '我', '们', '必', '须', '勇', '于', '面', '对', '，', '而', '且', '要', '愈', '挫', '愈', '勇', '，', '这', '样', '我', '们', '才', '能', '朝', '著', '成', '功', '之', '路', '前', '进', '。']

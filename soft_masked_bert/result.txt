@@ -1,0 +1,35 @@
+softmaskedbert/baseline/initial：
+detection sentence accuracy:0.637,precision:0.6617336152219874,recall:0.6453608247422681,F1:0.6534446764091858
+correction sentence accuracy:0.621,precision:0.6448202959830867,recall:0.6288659793814433,F1:0.6367432150313153
+sentence target modify:970,sentence sum:1000,sentence modified accurate:610
+softmaskedbert/baseline/sighan13：
+detection sentence accuracy:0.789,precision:0.8515625,recall:0.7865979381443299,F1:0.8177920685959271
+correction sentence accuracy:0.773,precision:0.8337053571428571,recall:0.7701030927835052,F1:0.8006430868167203
+sentence target modify:970,sentence sum:1000,sentence modified accurate:747
+softmaskedbert/pre_train/initial：
+detection sentence accuracy:0.715,precision:0.7357293868921776,recall:0.7175257731958763,F1:0.7265135699373695
+correction sentence accuracy:0.704,precision:0.7241014799154334,recall:0.7061855670103093,F1:0.7150313152400836
+sentence target modify:970,sentence sum:1000,sentence modified accurate:685
+softmaskedbert/pre_train/sighan13：
+detection sentence accuracy:0.829,precision:0.8767720828789531,recall:0.8288659793814434,F1:0.8521462639109698
+correction sentence accuracy:0.821,precision:0.8680479825517994,recall:0.8206185567010309,F1:0.843667196608373
+sentence target modify:970,sentence sum:1000,sentence modified accurate:796
+
+对于data1：
+1、加载pre_train/initial/model.pkl，并基于此继续训练sighan13：
+lr=2e-7， batchsize=32, max_len=128, epoch=400，得到：（发现中间过拟合了，在第epoch：162最好）
+detection sentence accuracy:0.77,precision:0.8091106290672451,recall:0.7690721649484537,F1:0.7885835095137421
+correction sentence accuracy:0.763,precision:0.8015184381778742,recall:0.7618556701030927,F1:0.781183932346723
+sentence target modify:970,sentence sum:1000,sentence modified accurate:739
+bert_pretrain ,epoch 162,train_loss: 5.798520624637604,valid_loss: 17.283852636814117
+
+
+
+对于data2：
+1、使用pre_train/initial直接测试：
+detection sentence accuracy:0.6641766807405002,precision:0.7342908438061041,recall:0.6641766807405002,F1:0.6974761255115962
+correction sentence accuracy:0.6122117570639818,precision:0.6768402154398564,recall:0.6122117570639818,F1:0.6429058663028651
+sentence target modify:3079,sentence sum:3079,sentence modified accurate:1885
+2、在该基础上我们进行训练，并测试：
+lr=2e-7， batchsize=32, max_len=128, epoch=1, 训练一个epoch后，f1达到0.73。尝试过多训练几个epoch，
+发现验证损失上升，f1值下降，可能由于过拟合了。
