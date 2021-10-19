@@ -1,0 +1,2 @@
+# pytorch_bert_chinese_spell_correction
+基于pytorch的中文拼写纠错，使用的模型是Bert以及SoftMaskedBert
